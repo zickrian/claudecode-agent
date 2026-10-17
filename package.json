@@ -1,0 +1,31 @@
+{
+  "name": "perushaan-ai",
+  "version": "0.1.0",
+  "description": "Kantor 3D dengan karyawan AI (Claude Code) yang mencari calon pembeli di Threads",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n server,web \"node --watch server/index.mjs\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.mjs",
+    "assets": "node scripts/fetch-assets.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.0",
+    "postprocessing": "^6.39.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.186.1",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "concurrently": "^10.0.6",
+    "vite": "^8.3.4"
+  }
+}

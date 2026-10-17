@@ -1,0 +1,14 @@
+# dependencies & build output
+node_modules/
+dist/
+
+# runtime data: real leads (Threads users) and run history — never commit
+data/
+
+# local env & OS / editor noise
+.env
+.env.*
+*.log
+.DS_Store
+.vscode/
+.idea/
