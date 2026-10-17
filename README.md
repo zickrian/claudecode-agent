@@ -52,11 +52,12 @@ Detail teknis (alur, API, format data, prompt): [`docs/ARSITEKTUR.md`](docs/ARSI
 ## Instalasi
 
 ```bash
+git clone https://github.com/zickrian/claudecode-agent.git
+cd claudecode-agent
 npm install
-npm run assets      # sekali saja: unduh aset 3D (CC0) ke public/assets/
 ```
 
-`npm run assets` aman diulang: file yang sudah ada dilewati.
+Aset 3D sudah ikut di repo (`public/assets/`). `npm run assets` hanya perlu kalau ada aset yang hilang. Script ini aman diulang: file yang sudah ada dilewati.
 
 ## Menjalankan
 
@@ -134,7 +135,7 @@ Aturan untuk Raka: **hanya membaca**. Dia tidak boleh like, follow, komentar, re
 │       └── layout.js     Posisi meja dan titik tujuan karakter (meter)
 ├── scripts/
 │   └── fetch-assets.mjs  Unduh aset 3D
-├── public/assets/        Aset 3D (hasil `npm run assets`)
+├── public/assets/        Aset 3D (CC0, sudah ikut di repo)
 ├── data/                 Dibuat otomatis saat runtime (di-gitignore)
 ├── docs/ARSITEKTUR.md    Dokumentasi teknis
 ├── index.html            Entry Vite
@@ -157,7 +158,7 @@ Aturan untuk Raka: **hanya membaca**. Dia tidak boleh like, follow, komentar, re
 |---|---|
 | Layar "Menghubungkan ke server…" terus | Server belum jalan. Jalankan `npm run dev`, lalu cek port 8787 tidak dipakai program lain. |
 | Halaman `:8787` bilang "Belum di-build" | Jalankan `npm run build` dulu, atau pakai `npm run dev` lalu buka `:5173`. |
-| Kantor 3D kosong / model hilang | Aset belum diunduh. Jalankan `npm run assets`. |
+| Kantor 3D kosong / model hilang | Ada aset yang hilang. Jalankan `npm run assets`. |
 | Kerja gagal: "Tidak bisa menjalankan claude" | Claude Code CLI belum terpasang atau tidak ada di `PATH`. |
 | Kerja gagal karena login | Jalankan `claude` di terminal dan login ulang. |
 | Laporan bilang pindah ke web search | Chrome tidak tersambung. Cek ekstensi Claude in Chrome sudah login dan Chrome terbuka. |
